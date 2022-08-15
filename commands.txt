@@ -1,0 +1,7 @@
+Compile:
+gcc ./src/NativeSample/c/NativeSample.c -o ./src/main/kotlin/build/libNativeSample.jnilib -shared -fPIC -I /usr/local/Cellar/openjdk/18.0.2/include -I /usr/local/Cellar/openjdk/18.0.2/include/linux
+kotlinc-jvm -include-runtime -d ./src/main/kotlin/build/KotlinJniTest.jar ./src/main/kotlin/*.kt
+
+Run:
+(cd ./src/main/kotlin/build/)
+java -jar KotlinJniTest.jar 
